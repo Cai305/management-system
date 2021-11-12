@@ -1,94 +1,111 @@
-<div class="p-fluid p-grid">
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <input type="text" id="inputtext" pInputText [(ngModel)]="value1"> 
-            <label for="inputtext">InputText</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label p-input-icon-left">
-            <i class="pi pi-search"></i>
-            <input type="text" id="inputtext-left" pInputText [(ngModel)]="valueIconLeft"> 
-            <label for="inputtext-left">Left Icon</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label p-input-icon-right">
-            <i class="pi pi-spin pi-spinner"></i>
-            <input type="text" id="inputtext-right" pInputText [(ngModel)]="valueIconRight"> 
-            <label for="inputtext-right">Right Icon</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-autoComplete inputId="autocomplete" [(ngModel)]="value2" [suggestions]="filteredCountries" (completeMethod)="searchCountry($event)" field="name"></p-autoComplete>
-            <label for="autocomplete">AutoComplete</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-calendar inputId="calendar" [(ngModel)]="value3"></p-calendar>
-            <label for="calendar">Calendar</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-chips inputId="chips" [(ngModel)]="value4"></p-chips>
-            <label for="chips">Chips</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-inputMask inputId="inputmask" mask="99/99/9999" [(ngModel)]="value5"></p-inputMask>
-            <label for="inputmask">InputMask</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-inputNumber inputId="inputnumber" [(ngModel)]="value6"></p-inputNumber>
-            <label for="inputnumber">InputNumber</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <div class="p-inputgroup">
-            <span class="p-inputgroup-addon">
-                <i class="pi pi-user"></i>
-            </span>
-            <span class="p-float-label">
-                <input type="text" id="inputgroup" pInputText [(ngModel)]="value7"> 
-                <label for="inputgroup">InputGroup</label>
-            </span>
-        </div>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-cascadeSelect inputId="cascadeSelect" [options]="cascadeSelectCountries" optionLabel="cname" optionGroupLabel="name" 
-                [optionGroupChildren]="['states', 'cities']"></p-cascadeSelect>
-            <label for="cascadeSelect">CascadeSelect</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="cities" [(ngModel)]="value8" optionLabel="name"></p-dropdown>
-            <label for="dropdown">Dropdown</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-multiSelect inputId="multiselect" [options]="cities" [(ngModel)]="value9" optionLabel="name" [filter]="false"></p-multiSelect>
-            <label for="multiselect">MultiSelect</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="value10" pInputTextarea></textarea>
-            <label for="textarea">Textarea</label>
-        </span>
-    </div>
-    <div class="p-field p-col-12 p-md-4">
-        <span class="p-float-label">
-            <p-password inputId="password" [(ngModel)]="value11"></p-password>
-            <label for="password">Password</label>
-        </span>
-    </div>
+<h5>Basic</h5>
+<p-button label="Submit"></p-button>
+<p-button label="Disabled" disabled="true"></p-button>
+<p-button label="Link" styleClass="p-button-link"></p-button>
+
+<h5>Icons</h5>
+<p-button icon="pi pi-check"></p-button>
+<p-button label="Submit" icon="pi pi-check"></p-button>
+<p-button label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+
+<h5>Severities</h5>
+<button pButton pRipple type="button" label="Primary"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-secondary"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-success"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-info"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-warning"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-help"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-danger"></button>
+
+<h5>Raised Buttons</h5>
+<button pButton pRipple type="button" label="Primary" class="p-button-raised"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-raised p-button-secondary"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-raised p-button-success"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-raised p-button-info"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-raised p-button-warning"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-raised p-button-help"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-raised p-button-danger"></button>
+
+<h5>Rounded Buttons</h5>
+<button pButton pRipple type="button" label="Primary" class="p-button-rounded"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-rounded p-button-secondary"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-rounded p-button-success"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-rounded p-button-info"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-rounded p-button-warning"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-rounded p-button-help"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-rounded p-button-danger"></button>
+
+<h5>Text Buttons</h5>
+<button pButton pRipple type="button" label="Primary" class="p-button-text"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-secondary p-button-text"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-success p-button-text"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-info p-button-text"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-warning p-button-text"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-help p-button-text"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-danger p-button-text"></button>
+<button pButton pRipple type="button" label="Plain" class="p-button-text p-button-plain"></button>
+
+<h5>Raised Text Buttons</h5>
+<button pButton pRipple type="button" label="Primary" class="p-button-raised p-button-text"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-raised p-button-secondary p-button-text"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-raised p-button-success p-button-text"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-raised p-button-info p-button-text"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-raised p-button-warning p-button-text"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-raised p-button-help p-button-text"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-raised p-button-danger p-button-text"></button>
+<button pButton pRipple type="button" label="Plain" class="p-button-raised p-button-text p-button-plain"></button>
+
+<h5>Outlined Buttons</h5>
+<button pButton pRipple type="button" label="Primary" class="p-button-outlined"></button>
+<button pButton pRipple type="button" label="Secondary" class="p-button-outlined p-button-secondary"></button>
+<button pButton pRipple type="button" label="Success" class="p-button-outlined p-button-success"></button>
+<button pButton pRipple type="button" label="Info" class="p-button-outlined p-button-info"></button>
+<button pButton pRipple type="button" label="Warning" class="p-button-outlined p-button-warning"></button>
+<button pButton pRipple type="button" label="Help" class="p-button-outlined p-button-help"></button>
+<button pButton pRipple type="button" label="Danger" class="p-button-outlined p-button-danger"></button>
+
+<h5>Rounded Icon Buttons</h5>
+<button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded"></button>
+<button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary"></button>
+<button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success"></button>
+<button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info"></button>
+<button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning"></button>
+<button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help"></button>
+<button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"></button>
+
+<h5>Rounded Text Icon Buttons</h5>
+<button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text"></button>
+<button pButton pRipple type="button" icon="pi pi-filter" class="p-button-rounded p-button-text p-button-plain"></button>
+
+<h5>Rounded and Outlined Icon Buttons</h5>
+<button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help p-button-outlined"></button>
+<button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined"></button>
+
+<h5>Badges</h5>
+<p-button label="Emails" badge="8"></p-button>
+<p-button label="Messages" icon="pi pi-users" styleClass="p-button-warning" badge="8" badgeClass="p-badge-danger"></p-button>
+
+<h5>Button Set</h5>
+<span class="p-buttonset">
+    <button pButton pRipple label="Save" icon="pi pi-check"></button>
+    <button pButton pRipple label="Delete" icon="pi pi-trash"></button>
+    <button pButton pRipple label="Cancel" icon="pi pi-times"></button>
+</span>
+
+<h5>Sizes</h5>
+<div class="sizes">
+    <p-button label="Small" icon="pi pi-check" styleClass="p-button-sm"></p-button>
+    <p-button label="Normal" icon="pi pi-check" styleClass="p-button" ></p-button>
+    <p-button label="Large" icon="pi pi-check" styleClass="p-button-lg"></p-button>
 </div>
